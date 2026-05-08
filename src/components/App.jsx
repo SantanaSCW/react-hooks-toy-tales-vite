@@ -31,12 +31,11 @@ function App() {
     setToys(updatedToys);
   }
 
-  // 4. DELETE TOY (DELETE)
-  function handleDeleteToy(deletedToy) {
-    const updatedToys = toys.filter((toy) => toy.id !== deletedToy.id);
-    setToys(updatedToys);
-  }
-
+// In App.js
+function handleDeleteToy(id) { // Accept just the ID
+  const updatedToys = toys.filter((toy) => toy.id !== id);
+  setToys(updatedToys);
+}
   return (
     <>
       <Header />
